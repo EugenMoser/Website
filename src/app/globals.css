@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+h1 {
+  @apply text-4xl;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -15,6 +19,8 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -30,4 +36,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
