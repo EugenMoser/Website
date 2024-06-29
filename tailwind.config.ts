@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        grey: '#C0C0C0',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +18,7 @@ const config: Config = {
       },
     },
   },
+
   plugins: [require('tailwindcss-animated')],
 };
 export default config;

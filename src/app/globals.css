@@ -2,15 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-4xl;
-}
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  h2 {
+    @apply text-2xl;
+  }
 }
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+@layer components {
+  .slide-right {
+    -webkit-animation: slide-right 0.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+  }
+
+  .flexSmall {
+    /* display: block; */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20%;
+    align-self: auto;
+    order: 0;
+  }
+  .flexBig {
+    /* display: block; */
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 80%;
+    align-self: auto;
+    order: 0;
+  }
+}
+/* 
 
 @media (prefers-color-scheme: dark) {
   :root {

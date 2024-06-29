@@ -66,11 +66,13 @@ function Navigation({}: NavigationProps): JSX.Element {
         <li key={link.href}>
           <Link
             href={link.href}
-            className={`block px-4 py-2 rounded-md ${
-              activeSection === link.href.slice(1)
-                ? 'bg-gray-300 text-gray-800 animate-shake animate-once animate-duration-1000 animate-ease-linear'
-                : 'text-gray-400 hover:bg-gray-200 '
-            }`}
+            className={` 
+              block px-4 py-2 rounded-md ${
+                activeSection === link.href.slice(1)
+                  ? // ? 'bg-gray-300 text-gray-800 animate-shake animate-once animate-duration-1000 animate-ease-linear'
+                    'bg-blue-400 slide-right'
+                  : 'text-gray-400 hover:bg-gray-200 '
+              }`}
           >
             {link.label}
           </Link>
