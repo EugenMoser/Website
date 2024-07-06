@@ -6,7 +6,7 @@ function Contact({}: ContactProps): JSX.Element {
       id='contact'
       className='col-span-1 sm:col-span-2 min-h-screen'
     >
-      <h1>Contact</h1>
+      <h1 className='pb-4'>Contact</h1>
       <p>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
