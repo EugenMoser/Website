@@ -6,7 +6,7 @@ function About({}: AboutProps): JSX.Element {
   return (
     <div
       id='about'
-      className='col-span-1 sm:col-span-1 pb-20'
+      className='sectionStyle'
     >
       <h1 className='pb-4'>About me</h1>
       <p>{strings.aboutMe}</p>

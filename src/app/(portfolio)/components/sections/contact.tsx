@@ -4,7 +4,7 @@ function Contact({}: ContactProps): JSX.Element {
   return (
     <div
       id='contact'
-      className='col-span-1 sm:col-span-2 min-h-screen'
+      className='sectionStyle'
     >
       <h1 className='pb-4'>Contact</h1>
       <p>

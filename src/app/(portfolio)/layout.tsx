@@ -1,9 +1,8 @@
 import '../globals.css';
 
 import type { Metadata } from 'next';
-import Image from 'next/image';
 
-import Navigation from './components/nav';
+import Sidebar from './components/sidebar';
 
 export const metadata: Metadata = {
   title: 'Eugen Moser personal website',
@@ -17,18 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='de'>
-      <body className='flex flex-row m-8 gap-20'>
-        <header className='col-span-1 sticky top-8 h-full'>
-          <h1>Eugen Moser</h1>
-          <Image
-            src='/images/Bild_Moser.png'
-            alt='image from Eugen'
-            width={200}
-            height={200}
-          />
-          <Navigation />
+      <body className='flex flex-row m-8 '>
+        <header className=' w-1/5 sticky top-8 h-screen'>
+          <Sidebar />
         </header>
-        <main>{children}</main>
+        <main className='w-4/5 '> {children}</main>
       </body>
     </html>
   );
