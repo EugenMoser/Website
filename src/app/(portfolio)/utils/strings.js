@@ -95,15 +95,15 @@ const strings = {
         period: `2003 – 2006`,
         position: `Automobilkaufmann`,
         company: `Humpisschule Ravensburg, Kaufmännische Berufsschule`,
-        details: [''],
+        details: [],
       },
     ],
     communityService: [
       {
         period: `2002 – 2003`,
-        position: `Ambulance transport`,
+        position: `Krankentransport`,
         company: `KAP in Wangen`,
-        details: [],
+        details: ['Ausbildung zum Rettungsdiensthelfer'],
       },
     ],
     graduation: [
@@ -115,5 +115,33 @@ const strings = {
       },
     ],
   },
+  certifications: [
+    {
+      name: `ITIL® 4 Foundation (PeopleCert)`,
+      link: `https://www.linkedin.com/in/eugen-moser/details/certifications/1714120003654/single-media-viewer/?profileId=ACoAACviTdMBMDUILrpUMpI-0E_J4J6x82fs4CY`,
+    },
+    {
+      name: `Professional Scrum Master I (Scrum.org)`,
+      link: `https://www.credly.com/badges/209b3aa3-700c-44f4-b2fa-baf525ab6569/public_url`,
+    },
+    {
+      name: `Microsoft 365 Certified: Fundamentials (Microsoft)`,
+      link: `https://www.linkedin.com/in/eugen-moser/details/certifications/1707384542261/single-media-viewer/?profileId=ACoAACviTdMBMDUILrpUMpI-0E_J4J6x82fs4CY`,
+    },
+  ],
+  education: [
+    {
+      name: `IT-Bootcamp (neuefische)`,
+      link: `https://www.linkedin.com/in/eugen-moser/details/certifications/1720299471327/single-media-viewer/?profileId=ACoAACviTdMBMDUILrpUMpI-0E_J4J6x82fs4CY`,
+    },
+    {
+      name: `Bachelor Professional of Business (IHK Schwaben)`,
+      link: `https://www.linkedin.com/in/eugen-moser/details/certifications/1720299399582/single-media-viewer/?profileId=ACoAACviTdMBMDUILrpUMpI-0E_J4J6x82fs4CY`,
+    },
+    {
+      name: `Ausbildung der Ausbilder (IHK Schwaben)`,
+      link: `https://www.linkedin.com/in/eugen-moser/details/certifications/1720299352602/single-media-viewer/?profileId=ACoAACviTdMBMDUILrpUMpI-0E_J4J6x82fs4CY`,
+    },
+  ],
 };
 export { strings };
