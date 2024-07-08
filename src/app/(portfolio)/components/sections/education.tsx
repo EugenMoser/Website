@@ -1,26 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { strings } from '../../utils/strings';
+import { strings } from '../../language/de';
 
-type EducationProps = {
+interface EducationProps {
+  active: boolean;
+}
+
+type EducationStringProps = {
   name: string;
   link: string;
 };
 
-function Education(): JSX.Element {
+function Education({ active }: EducationProps): JSX.Element {
   return (
-    <div
+    <section
       id='education'
-      className='sectionStyle'
+      className={`sectionStyle ${active && 'fadeInUp'}`}
     >
       <h1 className='pb-4'> Education</h1>
       <ul>
         {strings.education.map(
-          (education: EducationProps, index: number) => (
+          (education: EducationStringProps, index: number) => (
             <li
               key={index}
-              className='hover:text-linkblue flex items-center space-x-3 pb-2'
+              className='hover:text-blue flex items-center space-x-3 pb-2'
             >
               <Image
                 src='/icons/education-48.png'
@@ -38,7 +42,7 @@ function Education(): JSX.Element {
           )
         )}
       </ul>
-    </div>
+    </section>
   );
 }
 

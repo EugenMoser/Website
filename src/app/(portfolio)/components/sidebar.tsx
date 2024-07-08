@@ -6,7 +6,7 @@ interface SidebarProps {}
 
 function Sidebar({}: SidebarProps): JSX.Element {
   return (
-    <div className='mr-8 '>
+    <div className='mr-16 '>
       <Image
         src='/images/Bild_Moser.png'
         alt='image from Eugen'

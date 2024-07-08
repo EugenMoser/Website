@@ -1,25 +1,29 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { strings } from '../../utils/strings';
+import { strings } from '../../language/de';
 
-type CertificationsProps = {
+interface CertificationsProps {
+  active: boolean;
+}
+
+type CertificationsStringProps = {
   name: string;
   link: string;
 };
-function Certifications(): JSX.Element {
+function Certifications({ active }: CertificationsProps): JSX.Element {
   return (
-    <div
+    <section
       id='certifications'
-      className='sectionStyle'
+      className={`sectionStyle ${active && 'fadeInUp'}`}
     >
       <h1 className='pb-4'>Certifications</h1>
       <ul>
         {strings.certifications.map(
-          (certification: CertificationsProps, index: number) => (
+          (certification: CertificationsStringProps, index: number) => (
             <li
               key={index}
-              className='hover:text-linkblue flex items-center space-x-3 pb-2'
+              className='hover:text-blue flex items-center space-x-3 pb-2'
             >
               <Image
                 src='/icons/certificate-50.png'
@@ -37,7 +41,7 @@ function Certifications(): JSX.Element {
           )
         )}
       </ul>
-    </div>
+    </section>
   );
 }
 

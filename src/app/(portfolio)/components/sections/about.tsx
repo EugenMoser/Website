@@ -1,16 +1,18 @@
-import { strings } from '../../utils/strings';
+import { strings } from '../../language/de';
 
-interface AboutProps {}
+interface AboutProps {
+  active: boolean;
+}
 
-function About({}: AboutProps): JSX.Element {
+function About({ active }: AboutProps): JSX.Element {
   return (
-    <div
+    <section
       id='about'
-      className='sectionStyle'
+      className={`sectionStyle ${active && 'fadeInUp'}`}
     >
-      <h1 className='pb-4'>About me</h1>
-      <p>{strings.aboutMe}</p>
-    </div>
+      <h1 className='pb-4'>{strings.aboutMeHeader}</h1>
+      <p>{strings.aboutMeTest}</p>
+    </section>
   );
 }
 

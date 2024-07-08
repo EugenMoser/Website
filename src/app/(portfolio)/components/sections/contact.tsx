@@ -1,10 +1,12 @@
-interface ContactProps {}
+interface ContactProps {
+  active: boolean;
+}
 
-function Contact({}: ContactProps): JSX.Element {
+function Contact({ active }: ContactProps): JSX.Element {
   return (
-    <div
+    <section
       id='contact'
-      className='sectionStyle'
+      className={`sectionStyle ${active && 'fadeInUp'}`}
     >
       <h1 className='pb-4'>Contact</h1>
       <p>
@@ -63,7 +65,7 @@ function Contact({}: ContactProps): JSX.Element {
         eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
         gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
       </p>
-    </div>
+    </section>
   );
 }
 
