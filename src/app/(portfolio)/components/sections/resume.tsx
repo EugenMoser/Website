@@ -2,13 +2,16 @@ import '../../../globals.css';
 
 import React from 'react';
 
-import { strings } from '../../utils/strings';
+import { strings } from '../../language/de';
 
 interface ResumeProps {
   period: string;
   position: string;
   company: string;
   details: string[] | [];
+}
+interface ResumeTableProps {
+  active: boolean;
 }
 
 interface SectionProps {
@@ -58,7 +61,7 @@ function ResumeSection({ title, items }: SectionProps): JSX.Element {
   );
 }
 
-function ResumeTable(): JSX.Element {
+function ResumeTable({ active }: ResumeTableProps): JSX.Element {
   const {
     experience,
     continuingEducation,
@@ -68,9 +71,9 @@ function ResumeTable(): JSX.Element {
   } = strings.resume;
 
   return (
-    <div
+    <section
       id='resume'
-      className='sectionStyle'
+      className={`sectionStyle ${active && 'fadeInUp'}`}
     >
       <h1 className='pb-4'>Resume</h1>
       <table className='pb-20'>
@@ -95,7 +98,7 @@ function ResumeTable(): JSX.Element {
           items={graduation}
         />
       </table>{' '}
-    </div>
+    </section>
   );
 }
 

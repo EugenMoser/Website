@@ -1,5 +1,7 @@
 const strings = {
-  aboutMe: `I've finally found my passion in web development and now I’m like a kid in a 
+  aboutMeHeader: 'About me',
+
+  aboutMeTest: `I've finally found my passion in web development and now I’m like a kid in a 
   candy store – always eager to learn something new! With lightning-fast 
   understanding and top-notch skills in HTML5, CSS3, JavaScript, React, Next.js, 
   MongoDB, Git, GitHub, Azure DevOps, Node.js, and SPFx, I effortlessly dive into 

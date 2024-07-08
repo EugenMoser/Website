@@ -105,7 +105,7 @@ body {
     }
   }
 
-  .progress {
+  /* .progress {
     height: 3px;
     width: 0%;
     background-color: #fff;
@@ -119,9 +119,9 @@ body {
       background-color: rgb(20, 255, 226);
       width: 100%;
     }
-  }
+  } */
 
   .sectionStyle {
-    @apply flex flex-col justify-center min-h-screen self-center col-span-1 sm:col-span-1 pb-20;
+    @apply flex flex-col justify-center min-h-screen  sm:col-span-1 p-10 opacity-0 border-b border-gray-700;
   }
 }

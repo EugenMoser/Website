@@ -1,11 +1,15 @@
 'use client';
 import '../../globals.css';
 
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
 import Link from 'next/link';
 
-import { handleScroll, sections } from '../utils/scrollTracker';
+import { SECTIONS as sections } from '../constants/constants.js';
+import { handleScroll } from '../utils/scrollTracker';
 
 interface NavigationProps {}
 
@@ -21,13 +25,12 @@ function Navigation({}: NavigationProps): JSX.Element {
       setActiveSection(currentSection);
     };
 
-    window.addEventListener('scroll', onScroll, false);
+    window.addEventListener('scroll', onScroll);
     // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
   }, [activeSection]);
-
   return (
     <ul className='flex flex-col justify-end'>
       {sections.map((link) => (
@@ -37,7 +40,7 @@ function Navigation({}: NavigationProps): JSX.Element {
             className={` 
               block  px-4 py-2 rounded-md  ${
                 activeSection === link.href.slice(1)
-                  ? 'bg-linkblue slide-right'
+                  ? 'bg-blue slide-right'
                   : 'text-gray-400 hover:bg-gray-200 '
               }`}
           >

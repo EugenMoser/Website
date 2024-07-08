@@ -1,5 +1,6 @@
 const strings = {
-  aboutMe: `Ich habe endlich meine Leidenschaft für die Webentwicklung gefunden und bin jetzt wie ein Kind in einem
+  aboutMeHeader: 'Über mich',
+  aboutMeTest: `Ich habe endlich meine Leidenschaft für die Webentwicklung gefunden und bin jetzt wie ein Kind in einem
   Süßigkeitenladen - immer begierig, etwas Neues zu lernen! Mit blitzschnellem
   Verständnis und erstklassigen Fähigkeiten in HTML5, CSS3, JavaScript, React, Next.js,
   MongoDB, Git, GitHub, Azure DevOps, Node.js und SPFx tauche ich mühelos in

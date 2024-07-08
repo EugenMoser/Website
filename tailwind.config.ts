@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         grey: '#C0C0C0',
         black: '#00000',
-        linkblue: '#2563EB',
+        blue: '#2563EB',
       },
     },
   },
