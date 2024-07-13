@@ -1,21 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { strings } from '../../language/de';
-
-interface CertificationsProps {
-  active: boolean;
-}
+import { strings } from '../../../language/(portfolio)/de';
 
 type CertificationsStringProps = {
   name: string;
   link: string;
 };
-function Certifications({ active }: CertificationsProps): JSX.Element {
+function Certifications(): JSX.Element {
   return (
     <section
       id='certifications'
-      className={`sectionStyle ${active && 'fadeInUp'}`}
+      className={`sectionStyle`}
     >
       <h1 className='pb-4'>Certifications</h1>
       <ul>

@@ -1,22 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { strings } from '../../language/de';
-
-interface EducationProps {
-  active: boolean;
-}
+import { strings } from '../../../language/(portfolio)/de';
 
 type EducationStringProps = {
   name: string;
   link: string;
 };
 
-function Education({ active }: EducationProps): JSX.Element {
+function Education(): JSX.Element {
   return (
     <section
       id='education'
-      className={`sectionStyle ${active && 'fadeInUp'}`}
+      className={`sectionStyle `}
     >
       <h1 className='pb-4'> Education</h1>
       <ul>

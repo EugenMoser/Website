@@ -7,22 +7,28 @@
     @apply text-3xl;
   }
 
+  @media (max-width: 1024px) {
+    h1 {
+      @apply text-xl;
+    }
+  }
   h2 {
     @apply text-2xl;
   }
 }
 body {
+  display: flex;
   box-sizing: border-box;
   background-color: black;
   color: white;
-  margin: 0;
+  margin: 2rem;
   padding: 0;
 }
 @layer components {
   .slide-right {
-    -webkit-animation: slide-right 0.5s
-      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
   @-webkit-keyframes slide-right {
     0% {
@@ -72,39 +78,6 @@ body {
     margin-bottom: 0.5rem;
   }
 
-  .fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  @-webkit-keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-
   /* .progress {
     height: 3px;
     width: 0%;
@@ -122,6 +95,27 @@ body {
   } */
 
   .sectionStyle {
-    @apply flex flex-col justify-center min-h-screen  sm:col-span-1 p-10 opacity-0 border-b border-gray-700;
+    /* @apply flex flex-col justify-center min-h-screen p-10 border-b border-gray-700;*/
+    /* @apply p-10 border-b border-gray-700; */
+
+    /* display: flex;
+    flex-direction: column; */
+    padding: 2.5rem;
+    /* justify-content: center;
+    align-items: center; */
+    /* scroll-snap-align: center; */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  .scrollContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    /* height: 100vh; */
+    /* width: 100%; */
+    /* position: relative; */
   }
 }

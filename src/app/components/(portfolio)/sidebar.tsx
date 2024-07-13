@@ -6,16 +6,15 @@ interface SidebarProps {}
 
 function Sidebar({}: SidebarProps): JSX.Element {
   return (
-    <div className='mr-16 '>
+    <div className=' flex flex-col justify-center sticky top-0 h-screen'>
       <Image
+        className='self-center'
         src='/images/Bild_Moser.png'
         alt='image from Eugen'
         width={200}
         height={200}
       />
-      <div className='flex '>
-        <h1 className='mb-8 w-screen'>Eugen Moser</h1>
-      </div>
+      <h1 className='self-center mt-4 mb-8 '>Eugen Moser</h1>
       <Navigation />
     </div>
   );

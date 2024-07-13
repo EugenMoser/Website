@@ -8,12 +8,10 @@ import {
 
 import Link from 'next/link';
 
-import { SECTIONS as sections } from '../constants/constants.js';
-import { handleScroll } from '../utils/scrollTracker';
+import { SECTIONS as sections } from '../../constants/(portfolio)/constants';
+import { handleScroll } from '../../utils/(portfolio)/scrollTracker';
 
-interface NavigationProps {}
-
-function Navigation({}: NavigationProps): JSX.Element {
+function Navigation(): JSX.Element {
   const [activeSection, setActiveSection] = useState<string | void>(
     'about'
   );
@@ -34,14 +32,17 @@ function Navigation({}: NavigationProps): JSX.Element {
   return (
     <ul className='flex flex-col justify-end'>
       {sections.map((link) => (
-        <li key={link.href}>
+        <li
+          key={link.href}
+          className={'w-4/5'}
+        >
           <Link
             href={link.href}
             className={` 
               block  px-4 py-2 rounded-md  ${
                 activeSection === link.href.slice(1)
                   ? 'bg-blue slide-right'
-                  : 'text-gray-400 hover:bg-gray-200 '
+                  : 'text-gray-400 hover:text-blue '
               }`}
           >
             {link.label}

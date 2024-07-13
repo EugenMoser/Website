@@ -2,7 +2,7 @@ import '../globals.css';
 
 import type { Metadata } from 'next';
 
-import Sidebar from './components/sidebar';
+import Sidebar from '../components/(portfolio)/sidebar';
 
 export const metadata: Metadata = {
   title: 'Eugen Moser personal website',
@@ -15,9 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='de'>
-      <body className='flex flex-row m-8 '>
-        <header className=' w-1/5 sticky top-8 h-screen'>
+    <html
+      lang='de'
+      className='scroller'
+    >
+      <body>
+        <header className='w-1/5 '>
           <Sidebar />
         </header>
         <main className='w-4/5 '> {children}</main>

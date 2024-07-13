@@ -1,17 +1,19 @@
 import '../../../globals.css';
 
-import React from 'react';
+import React, {
+  useEffect,
+  useRef,
+} from 'react';
 
-import { strings } from '../../language/de';
+import gsap from 'gsap';
+
+import { strings } from '../../../language/(portfolio)/de';
 
 interface ResumeProps {
   period: string;
   position: string;
   company: string;
   details: string[] | [];
-}
-interface ResumeTableProps {
-  active: boolean;
 }
 
 interface SectionProps {
@@ -61,7 +63,7 @@ function ResumeSection({ title, items }: SectionProps): JSX.Element {
   );
 }
 
-function ResumeTable({ active }: ResumeTableProps): JSX.Element {
+function ResumeTable(): JSX.Element {
   const {
     experience,
     continuingEducation,
@@ -69,13 +71,43 @@ function ResumeTable({ active }: ResumeTableProps): JSX.Element {
     communityService,
     graduation,
   } = strings.resume;
-
+  const headlineRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    gsap.fromTo(
+      headlineRef.current,
+      {
+        autoAlpha: 0,
+        y: -20,
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          scroller: '.container',
+          trigger: headlineRef.current,
+          start: 'top 60%',
+          end: 'bottom 0%',
+          toggleActions: 'play none restart reverse',
+        },
+      }
+    );
+    return () => {};
+  }, []);
   return (
     <section
+      ref={sectionRef}
       id='resume'
-      className={`sectionStyle ${active && 'fadeInUp'}`}
+      className={`sectionStyle `}
     >
-      <h1 className='pb-4'>Resume</h1>
+      <h1
+        ref={headlineRef}
+        className='pb-4'
+      >
+        Resume
+      </h1>
       <table className='pb-20'>
         <ResumeSection
           title='Praktische Erfahrung'
